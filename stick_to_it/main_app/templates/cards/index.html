@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>All My Cards</h1>
+
+ 
+ {% for card in cards %}
+ <div class="card">
+  <h3>{{card.activity}}</h3>
+  <p>{{card.due_date}}</p>
+  <p>{{card.complete_date}}</p>
+ </div> 
+  
+ {% endfor %}
+  
+{% endblock content %}
+  
