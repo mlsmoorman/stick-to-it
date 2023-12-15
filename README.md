@@ -1,5 +1,1 @@
-- Hi from **just** Brad *on Brad's branch*
-
-Removed:
-- ~~Nathanael~~
-- ~~Melissa~~
+- Hi from Brad, Nathanael, and Melissa
