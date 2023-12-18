@@ -17,6 +17,7 @@ Description of App Here
 
 - Python
 - Django
+- ORM
 - DTL
 - CSS
 
