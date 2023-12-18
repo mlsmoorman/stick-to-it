@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
-from .models import Card
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from .models import Card 
 
 # some dummy/pre-database data
 # cards = [
@@ -21,6 +21,17 @@ from .models import Card
 class CardCreate(CreateView):
   model = Card
   fields = '__all__'
+
+
+class CardDelete(DeleteView):
+  model = Card
+  success_url = '/cards'
+
+
+class CardUpdate(UpdateView):
+  model = Card
+  fields = '__all__'
+
 
 # Create your views here.
 def cards_index(request):
