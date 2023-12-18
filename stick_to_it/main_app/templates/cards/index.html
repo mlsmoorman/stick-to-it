@@ -2,17 +2,18 @@
 
 
 {% block content %}
+<div class="titlecontainer">
 <h1>All My Cards</h1>
+</div>
+<section>
+{% for card in cards %}
 
- 
- {% for card in cards %}
- <div class="card">
-  <h3>{{card.activity}}</h3>
-  <p>{{card.due_date}}</p>
-  <p>{{card.complete_date}}</p>
- </div> 
-  
- {% endfor %}
-  
+    <div class="card">
+        <h2>{{card.activity}}</h2>
+        <p class="carddate">{{card.due_date}}</p>
+        <p class="carddate">{{card.complete_date}}</p>
+    </div>
+
+{% endfor %}
+</section>
 {% endblock content %}
-  

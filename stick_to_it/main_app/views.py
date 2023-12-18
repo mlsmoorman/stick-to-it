@@ -17,6 +17,7 @@ from .models import Card
 #    }
 # ]
 
+
 # Create your views here.
 def cards_index(request):
   cards = Card.objects.all()
