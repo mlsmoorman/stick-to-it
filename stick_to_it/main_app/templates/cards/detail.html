@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Card Details</h1>
+
+<div>
+  <div>
+    <span>{{ card.activity }}</span>
+    <p>Due Date: {{ card.due_date }}</p>
+    <p>Complete Date: {{ card.complete_date }}</p>
+  </div>
+</div>
+
+{% endblock %}

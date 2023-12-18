@@ -8,11 +8,13 @@
 <section>
 {% for card in cards %}
 
+<a href="{% url 'detail' card.id %}">
     <div class="card">
         <h2>{{card.activity}}</h2>
         <p class="carddate">{{card.due_date}}</p>
         <p class="carddate">{{card.complete_date}}</p>
     </div>
+</a>
 
 {% endfor %}
 </section>

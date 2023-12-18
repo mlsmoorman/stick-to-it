@@ -18,9 +18,10 @@
   <header>
     <nav>
         <ul class="navlist">
-          <li><a href="/">Stick To It</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/cards">View my cards</a></li>
+          <li><a href="{% url 'home' %}">Stick To It</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'index' %}">View my Activities</a></li>
+          <li><a href="{% url 'card_create' %}">Add an Activity</a></li>
         </ul>
       
     </nav>
