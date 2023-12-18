@@ -1,6 +1,6 @@
 Welcome to Stick To It from Brad, Nathanael, and Melissa
 
-<img src="" alt="STICK TO IT LOGO Placeholder">
+<img src="https://i.imgur.com/u1GU7WK.png" alt="STICK TO IT LOGO Placeholder">
 
 Description of App Here
 
