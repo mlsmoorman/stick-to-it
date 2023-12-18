@@ -2,28 +2,40 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto&display=swap" rel="stylesheet">
 
   <!--             -->
   <title>Document</title>
 </head>
+
 <body>
   <header>
     <nav>
-        <ul class="navlist">
-          <li><a href="{% url 'home' %}">Stick To It</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'index' %}">View my Activities</a></li>
-          <li><a href="{% url 'card_create' %}">Add an Activity</a></li>
-        </ul>
-      
+      <ul class="navlist">
+        <li><a href="{% url 'home' %}">Stick To It</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'index' %}">View my Activities</a></li>
+        <li><a href="{% url 'card_create' %}">Add an Activity</a></li>
+        <li>
+          <form id="logout-form" method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn">Log out</button>
+          </form>
+        </li>
+        {% else %}
+        <li><a href="{% url 'login' %}">Log In</a></li>
+        {% endif %}
+      </ul>
+
     </nav>
   </header>
   <main>
@@ -34,4 +46,5 @@
     <div>All Rights Reserved, &copy; 2023 Stick To It &nbsp;</div>
   </footer>
 </body>
+
 </html>
