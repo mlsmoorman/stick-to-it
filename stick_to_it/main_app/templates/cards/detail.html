@@ -9,6 +9,10 @@
     <p>Due Date: {{ card.due_date }}</p>
     <p>Complete Date: {{ card.complete_date }}</p>
   </div>
+  <div>
+    <a href="{% url 'card_update' card.id %}">Edit</a>
+    <a href="{% url 'card_delete' card.id %}">Delete</a>
+  </div>
 </div>
 
 {% endblock %}
