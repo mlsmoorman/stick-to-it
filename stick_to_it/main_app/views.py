@@ -51,6 +51,7 @@ class CardUpdate(LoginRequiredMixin, UpdateView):
   fields = ['activity', 'due_date', 'complete_date']
 
 
+
 @login_required
 def cards_index(request):
   cards = Card.objects.filter(user=request.user)
