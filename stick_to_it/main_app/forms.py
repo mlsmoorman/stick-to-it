@@ -10,4 +10,5 @@ class CardForm(ModelForm):
             'due_date': forms.DateInput(attrs={'type': 'date'}),
             'complete_date': forms.DateInput(attrs={'type': 'date'}),
         }
+       
     

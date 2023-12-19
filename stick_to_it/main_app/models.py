@@ -18,6 +18,8 @@ class Card(models.Model):
     def get_absolute_url(self):
         return reverse('index')
     
+    class Meta:
+        ordering = ['due_date']
 class Todo(models.Model):
     name = models.CharField(max_length=50, blank=True, null=True)
     card = models.ForeignKey(Card, on_delete=models.CASCADE)
