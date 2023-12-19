@@ -3,6 +3,7 @@
 {% block content %}
 
 {% if object %}
+<a href="{{request.META.HTTP_REFERER}}">Go back</a>
 <h1>Edit "{{ card.activity }}"</h1>
 {% else %}
 <h1>Add Activity</h1>
