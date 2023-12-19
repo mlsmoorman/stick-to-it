@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="titlecontainer">
-<h1>All My Cards</h1>
+<h1>All My Activities</h1>
 </div>
 <section>
 {% for card in cards %}
@@ -12,6 +12,11 @@
     <div class="card">
         <h2>{{card.activity}}</h2>
         <p class="carddate">{{card.due_date}}</p>
+        
+        {% for todo in card.todo_set.all %}
+            <p class="carddate">{{todo.name}}</p>
+        {% endfor %}
+        
         <p class="carddate">{{card.complete_date}}</p>
     </div>
 </a>
