@@ -48,8 +48,7 @@ class CardDelete(LoginRequiredMixin, DeleteView):
 # Update an Activity Card
 class CardUpdate(LoginRequiredMixin, UpdateView):
   model = Card
-  form_class = CardForm
-  fields = ['activity', 'due_date', 'complete_date', 'complete']
+  fields = ['activity', 'due_date', 'complete_date']
 
 
 @login_required
@@ -71,3 +70,9 @@ def cards_detail(request, card_id):
   card = Card.objects.get(id=card_id)
   form_class = CardForm
   return render(request, 'cards/detail.html', { 'card': card })
+
+
+@login_required
+def cards_archive(request):
+    cards = Card.objects.filter(user=request.user)
+    return render(request, 'cards/archive.html', { 'cards': cards })
