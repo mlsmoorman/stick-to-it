@@ -13,4 +13,4 @@ class CardForm(ModelForm):
         widgets = {
             'due_date': forms.DateInput(attrs={'type': 'date'})
         }
-        
+    
