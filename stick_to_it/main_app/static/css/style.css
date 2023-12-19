@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto';
-  font-size: 18px;
+  
 }
 body {
   background-color: white;
@@ -118,11 +118,16 @@ h1 {
   /* -webkit-text-stroke: 1px white; */
 }
 
+.subheading {
+  margin-top: 1%;
+}
+
 section {
   /* rotate: -40 -70 -10 30deg; */
+  
   color: black;
   margin-left: 30px;
-  margin-top: 25px;
+  margin-top: 3%;
   display: flex;
   /* border: solid black 1px; */
   flex-direction: left;
@@ -135,7 +140,7 @@ section {
 .card {
   width: 200px;
   height: 200px;
-  background: linear-gradient(to top,  #f4f018, #f4f018 90%);
+  background: linear-gradient(to top,  #fbf969, #fffc65 90%);
   border-radius: 2px;
   
   /* background-color: #fbf719; */
@@ -145,6 +150,29 @@ section {
   /* border: solid black 1px; */
   margin: 10px
 
+}
+
+.addcard {
+  width: 200px;
+  height: 200px;
+  /* background: linear-gradient(to top,  #f4f018, #f4f018 90%); */
+  border-radius: 20px;
+  /* border: 2px solid black; */
+  /* background-color: #fbf719; */
+  /* background-color: #00ffff; */
+  /* background-color: #ff52ff; */
+  padding: 24px;
+  /* border: solid black 1px; */
+  margin: 10px;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.addcard:hover {
+  background-color: rgb(240, 240, 240);
 }
 
 .cardlink, .cardlink:visited {
@@ -221,7 +249,30 @@ form {
   transform: scale(1.2); 
   background-color: white;
 }
+
+.plus, .plus:visited {
+  text-decoration: none;
+  font-size: 8em;
+  color: lightgray;
+  transition: 0.4s;
   
+}
+
+.plus:hover {
+  color: black
+}
+  
+/* GOOGLE SYMBOL  */
+  .material-symbols-outlined {
+  font-size: 1000%;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  
+}
+
 /*curl bottom left */
 .card {
   backface-visibility: hidden;
