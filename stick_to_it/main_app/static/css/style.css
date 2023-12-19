@@ -68,7 +68,7 @@ font-family: 'Bungee';
   border-radius: 3px;
   transition: 0.4s;
   
-  transform: scale(1.2); 
+  
   text-shadow: -2px -2px 0 #fe73fe,
   2px 2px 0 #fbf719;
 }
@@ -77,7 +77,7 @@ font-family: 'Bungee';
   background-color: #ff52ff; */
   border-radius: 3px;
   transition: 0.4s;
-  transform: scale(1.2); 
+  
   
   text-shadow: -2px -2px 0 #00ffff,
   2px 2px 0 #fbf719;
@@ -88,7 +88,7 @@ font-family: 'Bungee';
   /* background-color: #fbf719;; */
   border-radius: 3px;
   transition: 0.4s;
-  transform: scale(1.2); 
+  
 }
 .navlist li a:visited {
   color: black;
@@ -96,6 +96,7 @@ font-family: 'Bungee';
 }
 .navlist li a:hover {
   letter-spacing: 2px;
+  /* transform: scale(1.2);  */
   /* color: white; */
   /* border-bottom: 2px solid black;  */
 
@@ -119,7 +120,7 @@ h1 {
 
 section {
   /* rotate: -40 -70 -10 30deg; */
-  
+  color: black;
   margin-left: 30px;
   margin-top: 25px;
   display: flex;
@@ -146,6 +147,9 @@ section {
 
 }
 
+.cardlink, .cardlink:visited {
+  color: black
+}
 
 .carddate {
   /* background-color: white; */
