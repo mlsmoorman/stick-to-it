@@ -29,11 +29,7 @@ def signup(request):
 # Create a new Activity Card
 class CardCreate(LoginRequiredMixin, CreateView):
   model = Card
-  #======= Leaving off complete_date to program in a checkbox or similar ============
-  # fields = ['activity', 'due_date']
-  
   form_class = CardForm
-  
   def form_valid(self, form):
     form.instance.user = self.request.user 
     return super().form_valid(form)
@@ -55,7 +51,7 @@ class CardUpdate(LoginRequiredMixin, UpdateView):
 
 @login_required
 def cards_index(request):
-  cards = Card.objects.filter(user=request.user)
+  cards = Card.objects.filter(user=request.user).filter(complete_date=None)
   return render(request, 'cards/index.html', { 'cards': cards })
 
 
@@ -75,5 +71,5 @@ def cards_detail(request, card_id):
 
 @login_required
 def cards_archive(request):
-    cards = Card.objects.filter(user=request.user)
+    cards = Card.objects.filter(user=request.user).exclude(complete_date=None)
     return render(request, 'cards/archive.html', { 'cards': cards })

@@ -6,15 +6,15 @@
 </div>
 
 <section>
+    <p>You've got <strong><mark>{{cards|length}}</mark></strong> cards to do—why not check one off?</p>
     {% for card in cards %}
-    {% if card.complete_date == None %}
-    <a href="{% url 'detail' card.id %}" class="cardlink">
+    <a href="{% url 'detail' card.id %}">
         <div class="card">
             <h2>{{card.activity}}</h2>
             <p class="carddate">Due Date: {{card.due_date}}</p>
         </div>
     </a>
-    {% endif %}
     {% endfor %}
+    <div class="card">Or, you can <a href="{% url 'card_create' %}">add some more</a>...</div>
 </section>
 {% endblock content %}

@@ -6,16 +6,16 @@
 </div>
 
 <section>
+    <p>You've completed {{cards|length}} cards—great job!</p>
     {% for card in cards %}
-    {% if not card.complete_date == None %}
-    <a href="{% url 'detail' card.id %}" class="cardlink">
+    <a href="{% url 'detail' card.id %}">
         <div class="card">
             <h2>{{card.activity}}</h2>
             <p class="carddate">Due Date: {{card.due_date}}</p>
             <p class="carddate">Complete Date: {{card.complete_date}}</p>
         </div>
     </a>
-    {% endif %}
     {% endfor %}
+
 </section>
 {% endblock content %}
