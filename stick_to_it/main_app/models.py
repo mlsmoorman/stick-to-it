@@ -21,10 +21,12 @@ class Card(models.Model):
     
     class Meta:
         ordering = ['due_date']
+        
+        
 class Todo(models.Model):
     name = models.CharField(max_length=50, blank=True, null=True)
     card = models.ForeignKey(Card, on_delete=models.CASCADE)
-
+    
     
     def __str__(self):
         return self.name
