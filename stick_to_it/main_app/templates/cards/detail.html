@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+<a href="{% url 'index' %}">Go back</a>
+<h1>{{ card.activity }}</h1>
 
-<h1>Card Details</h1>
-
-<div>
+<div class="editbox">
   <div>
-    <span>{{ card.activity }}</span>
+    
     <p>Due Date: {{ card.due_date }}</p>
     <p>Complete Date: {{ card.complete_date }}</p>
   </div>
   <div>
-    <a href="{% url 'card_update' card.id %}">Edit</a>
-    <a href="{% url 'card_delete' card.id %}">Delete</a>
+    <a href="{% url 'card_update' card.id %}" class="editbtn">Edit</a>
+    <a href="{% url 'card_delete' card.id %}" class="deletebtn">Delete</a>
   </div>
 </div>
 
