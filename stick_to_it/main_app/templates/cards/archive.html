@@ -7,7 +7,6 @@
 
 <section>
     {% for card in cards %}
-    {% if not card.complete_date == None %}
     <a href="{% url 'detail' card.id %}">
         <div class="card">
             <h2>{{card.activity}}</h2>
@@ -15,7 +14,6 @@
             <p class="carddate">Complete Date: {{card.complete_date}}</p>
         </div>
     </a>
-    {% endif %}
     {% endfor %}
 </section>
 {% endblock content %}
