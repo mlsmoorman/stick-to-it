@@ -2,6 +2,7 @@
 
 
 {% block content %}
+<a href="{{request.META.HTTP_REFERER}}" class="backbtn">Go back</a>
 <h1>Delete Activity</h1>
 
 <h4>Are you sure you want to delete <span>{{ object.activity }}</span>?</h4>
