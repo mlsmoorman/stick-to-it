@@ -48,7 +48,7 @@ class CardDelete(LoginRequiredMixin, DeleteView):
 # Update an Activity Card
 class CardUpdate(LoginRequiredMixin, UpdateView):
   model = Card
-  fields = '__all__'
+  fields = ['activity', 'due_date', 'complete_date', 'complete']
 
 
 @login_required

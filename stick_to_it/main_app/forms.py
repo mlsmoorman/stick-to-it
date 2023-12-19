@@ -5,7 +5,7 @@ from .models import Card
 class CardForm(ModelForm):
     class Meta:
         model = Card
-        fields = ['activity', 'due_date']
+        fields = ['activity', 'due_date', 'complete']
         # widgets = {
 		# 	'due_date': Textarea(attrs={'type':'date'})
 		# }
@@ -13,4 +13,4 @@ class CardForm(ModelForm):
         widgets = {
             'due_date': forms.DateInput(attrs={'type': 'date'})
         }
-        
+    
