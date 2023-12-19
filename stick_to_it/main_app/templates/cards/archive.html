@@ -6,6 +6,7 @@
 </div>
 
 <section>
+    <p>You've completed {{cards|length}} cards—great job!</p>
     {% for card in cards %}
     <a href="{% url 'detail' card.id %}">
         <div class="card">
@@ -15,5 +16,6 @@
         </div>
     </a>
     {% endfor %}
+
 </section>
 {% endblock content %}

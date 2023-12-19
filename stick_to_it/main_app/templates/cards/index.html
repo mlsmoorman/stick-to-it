@@ -6,6 +6,7 @@
 </div>
 
 <section>
+    <p>You've got <strong><mark>{{cards|length}}</mark></strong> cards to do—why not check one off?</p>
     {% for card in cards %}
     <a href="{% url 'detail' card.id %}">
         <div class="card">
@@ -14,5 +15,6 @@
         </div>
     </a>
     {% endfor %}
+    <div class="card">Or, you can <a href="{% url 'card_create' %}">add some more</a>...</div>
 </section>
 {% endblock content %}
