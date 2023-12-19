@@ -23,7 +23,8 @@
         <li class="yellow"><a href="{% url 'home' %}">Stick To It</a></li>
         <li class="cyan"><a href="{% url 'about' %}">About</a></li>
         {% if user.is_authenticated %}
-        <li class="magenta"><a href="{% url 'index' %}">View my Activities</a></li>
+        <li class="magenta"><a href="{% url 'index' %}">View my  Activities</a></li>
+        <li class="cyan"><a href="{% url 'archive' %}">See the Archive</a></li>
         <li class="yellow"><a href="{% url 'card_create' %}">Add an Activity</a></li>
         <li>
           <form id="logout-form" method="POST" action="{% url 'logout' %}">

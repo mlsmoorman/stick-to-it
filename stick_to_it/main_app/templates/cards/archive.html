@@ -2,16 +2,17 @@
 
 {% block content %}
 <div class="titlecontainer">
-    <h1>All My Activities</h1>
+    <h1>Archived Activities</h1>
 </div>
 
 <section>
     {% for card in cards %}
-    {% if card.complete_date == None %}
+    {% if not card.complete_date == None %}
     <a href="{% url 'detail' card.id %}">
         <div class="card">
             <h2>{{card.activity}}</h2>
             <p class="carddate">Due Date: {{card.due_date}}</p>
+            <p class="carddate">Complete Date: {{card.complete_date}}</p>
         </div>
     </a>
     {% endif %}
