@@ -7,6 +7,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+import datetime
+
 from .models import Card
 from .forms import CardForm
 
@@ -73,4 +75,4 @@ def cards_detail(request, card_id):
 @login_required
 def cards_archive(request):
     cards = Card.objects.filter(user=request.user).exclude(complete_date=None)
-    return render(request, "cards/archive.html", {"cards": cards})
+    return render(request, 'cards/archive.html', { 'cards': cards })
