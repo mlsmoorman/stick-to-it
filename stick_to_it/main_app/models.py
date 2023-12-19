@@ -10,7 +10,7 @@ class Card(models.Model):
     activity = models.CharField(max_length=100)
     due_date = models.DateField(blank=True, null=True)
     complete_date = models.DateField(blank=True, null=True)
-    complete = models.BooleanField(default=False)
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
@@ -22,7 +22,7 @@ class Card(models.Model):
 class Todo(models.Model):
     name = models.CharField(max_length=50, blank=True, null=True)
     card = models.ForeignKey(Card, on_delete=models.CASCADE)
-    complete = models.BooleanField(default=False)
+
     
     def __str__(self):
         return self.name
