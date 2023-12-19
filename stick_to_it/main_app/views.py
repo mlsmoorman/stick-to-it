@@ -7,6 +7,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+import datetime
+
 from .models import Card 
 from .forms import CardForm
 
@@ -48,7 +50,6 @@ class CardUpdate(LoginRequiredMixin, UpdateView):
   # fields = ['activity', 'due_date', 'complete_date']
 
 
-
 @login_required
 def cards_index(request):
   cards = Card.objects.filter(user=request.user).filter(complete_date=None)
@@ -73,3 +74,9 @@ def cards_detail(request, card_id):
 def cards_archive(request):
     cards = Card.objects.filter(user=request.user).exclude(complete_date=None)
     return render(request, 'cards/archive.html', { 'cards': cards })
+
+    
+@login_required
+def cards_complete(request, card_id):
+    Card.objects.filter(id=card_id).update(complete_date=datetime.date.today())
+    return redirect('index')
