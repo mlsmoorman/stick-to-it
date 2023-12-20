@@ -31,6 +31,7 @@ main {
   padding: 48px;
   background-color: #FCFAFF;
   font-family: 'Roboto';
+  
 }
 
 header {
@@ -103,7 +104,7 @@ flex-direction: right;
   
 }
 .navlist li a:visited {
-  color: black;
+  color: #252525;
  
 }
 .navlist li a:hover {
@@ -214,7 +215,13 @@ section {
  .cardform {
   background-color: rgb(231, 231, 231);
   border-radius: 25px;
-  width: 30%;
+  /* width: 40%; */
+  flex-direction: column;
+  display: flex;
+  align-items: left;
+  margin: 0 auto;
+  padding: 50px;
+  
  }
 
 footer {
@@ -228,8 +235,18 @@ footer {
 
 form {
   margin-top: 3%;
-  display: flex;
-  flex-direction: right;
+  /* display: flex;
+  flex-direction: right; */
+}
+
+.cardform input[type=text] {
+  background-color: transparent;
+  border: none;
+  font-size: 54px;
+  width: fit-content !important;
+
+  
+
 }
 
 .editbox {
