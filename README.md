@@ -1,19 +1,22 @@
 Welcome to Stick To It from Brad, Nathanael, and Melissa
 
-<img src="./stick_to_it/main_app/static/images/Stick To It Final.jpg" alt="STICK TO IT LOGO Placeholder">
+<!-- <img src="./stick_to_it/main_app/static/images/Stick To It Final.png" alt="STICK TO IT LOGO Placeholder"> -->
+<img src="https://i.imgur.com/BpcZriS.png" width="50%" height="50%" alt="STICK TO IT LOGO Placeholder">
 
 Description of App Here
 
 
-# Screenshots
+# <img src="https://i.imgur.com/zGIeQDx.png" width="5%" height="5%" alt="yellow">Screenshots
 
 <img src="" alt="screentshot1 placeholder">
 
 <img src="" alt="screentshot2 placeholder">
 
 <img src="" alt="screentshot3 placeholder">
+</br>
+</br>
 
-# Technologies Used
+# <img src="https://i.imgur.com/bsqBd83.png" width="5%" height="5%" alt="pink">Technologies Used
 
 - Python
 - Django
@@ -23,12 +26,15 @@ Description of App Here
 
 # Let's Check it Out!
 
-### [Stick To It]()**Coming Soon!!!
+### [Stick To It]()**Link to App Coming Soon!!!
 ### [Trello](https://trello.com/b/Emx3UtuT/project-4-stick-to-it)
 
-# Future Enhancements
+# <img src="https://i.imgur.com/IbkyBku.png" width="5%" height="5%" alt="blue">Future Enhancements
 
 - Use of the Google Calendar API to set up calendar reminders
 - Badge system here users earn badges based on number of tasks completed
 - Daily Stick-To-Its that reappear every day
 - The About Page! :D 
+- Daily Goals
+- Inspirational / Motivational quotes to help users keep working toward their goals
+- Dark Mode
