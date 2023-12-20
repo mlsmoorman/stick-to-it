@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Card(models.Model):
     activity = models.CharField(max_length=100)
-    due_date = models.DateField(blank=True, null=True)
+    due_date = models.DateField('Due Date')
     complete_date = models.DateField(blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     
