@@ -9,65 +9,67 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 import datetime
 
-from .models import Card 
+from .models import Card
 from .forms import CardForm
+
 
 # Sign Up User:
 def signup(request):
-  error_message = ''
-  if request.method == 'POST':
-    form = UserCreationForm(request.POST)
-    if form.is_valid():
-      user = form.save()
-      login(request, user)
-      return redirect('index')
-    else:
-      error_message = 'Invalid sign up - please try again!'
-  form = UserCreationForm()
-  context = {'form': form, 'error_message': error_message}
-  return render(request, 'registration/signup.html', context)
+    error_message = ""
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("index")
+        else:
+            error_message = "Invalid sign up - please try again!"
+    form = UserCreationForm()
+    context = {"form": form, "error_message": error_message}
+    return render(request, "registration/signup.html", context)
 
 
 # Create a new Activity Card
 class CardCreate(LoginRequiredMixin, CreateView):
-  model = Card
-  form_class = CardForm
-  def form_valid(self, form):
-    form.instance.user = self.request.user 
-    return super().form_valid(form)
+    model = Card
+    form_class = CardForm
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 
 # Delete an Activity Card
 class CardDelete(LoginRequiredMixin, DeleteView):
-  model = Card
-  success_url = '/cards'
+    model = Card
+    success_url = "/cards"
 
 
 # Update an Activity Card
 class CardUpdate(LoginRequiredMixin, UpdateView):
-  model = Card
-  form_class = CardForm
-  # fields = ['activity', 'due_date', 'complete_date']
+    model = Card
+    form_class = CardForm
+    # fields = ['activity', 'due_date', 'complete_date']
 
 
 @login_required
 def cards_index(request):
-  cards = Card.objects.filter(user=request.user).filter(complete_date=None)
-  return render(request, 'cards/index.html', { 'cards': cards })
+    cards = Card.objects.filter(user=request.user).filter(complete_date=None)
+    return render(request, "cards/index.html", {"cards": cards})
 
 
 def home(request):
-  return render(request, 'home.html')
+    return render(request, "home.html")
 
 
 def about(request):
-  return render(request, 'about.html')
+    return render(request, "about.html")
 
 
 @login_required
 def cards_detail(request, card_id):
-  card = Card.objects.get(id=card_id)
-  return render(request, 'cards/detail.html', { 'card': card })
+    card = Card.objects.get(id=card_id)
+    return render(request, "cards/detail.html", {"card": card})
 
 
 @login_required
@@ -75,7 +77,6 @@ def cards_archive(request):
     cards = Card.objects.filter(user=request.user).exclude(complete_date=None)
     return render(request, 'cards/archive.html', { 'cards': cards })
 
-    
 @login_required
 def cards_complete(request, card_id):
     Card.objects.filter(id=card_id).update(complete_date=datetime.date.today())
