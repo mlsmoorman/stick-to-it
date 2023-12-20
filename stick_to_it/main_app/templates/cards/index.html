@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="titlecontainer">
-    <h1>All My Activities</h1>
-    <p class="subheading">You've got <strong><mark>{{cards|length}}</mark></strong> cards to do—why not check one off?
+    <h1>My Tasks</h1>
+    <p class="subheading">You've got <mark>{{cards|length}}</mark> cards to do—why not check one off?
     </p>
 </div>
 
@@ -12,18 +12,27 @@
     {% for card in cards %}
     <a href="{% url 'detail' card.id %}" class="cardlink">
         <div class="card">
+           
+            {% if card.due_date != None %}
+            <p class="carddate">Due: {{card.due_date}}</p>
+            {% endif %}
             <h2>{{card.activity}}</h2>
-            <p class="carddate">Due Date: {{card.due_date}}</p>
             <!-- button will move card to archive but redirect to index -->
             <form action="{% url 'complete' card.id %}" method="post">
                 {% csrf_token %}
-                <button type="submit">Job Done!</button>
+                <button type="submit" class="material-symbols-outlined checkbox checkbtn"></button>
+               
+            </form>
+            <form action="{% url 'card_update' card.id %}"  method="post"> 
+                {% csrf_token %}
+                <button type="submit" class="material-symbols-outlined pencilbtn"></button> 
             </form>
         </div>
     </a>
+   
     {% endfor %}
     <div class="addcard">
-        <a href="{% url 'card_create' %}" class="plus">+</a>
+        <a href="{% url 'card_create' %}" class="material-symbols-outlined plus">add</a>
     </div>
 </section>
 {% endblock content %}
