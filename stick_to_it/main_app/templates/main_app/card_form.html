@@ -4,19 +4,24 @@
 
 {% if object %}
 <div class="cardform">
-<a href="{{request.META.HTTP_REFERER}}" class="backbtn">Go back</a>
-<!-- <h1>Edit "{{ card.activity }}"</h1> -->
-{% else %}
-<h1>Add Task</h1>
-{% endif %}
+  <a href="{{request.META.HTTP_REFERER}}" class="backbtn">Go back</a>
+  <!-- <h1>Edit "{{ card.activity }}"</h1> -->
+  {% else %}
+  <h1>Add Task</h1>
+  {% endif %}
 
 
-<form action="" method="POST">
-  {% csrf_token %}
-  <table>
-    {{ form.as_table }}
-  </table>
-  <input type="submit" value="Submit!" class="submitbtn">
-</form>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+
+    {% if object %}
+    <input type="submit" value="Update task" class="submitbtn">
+    {% else %}
+    <input type="submit" value="Add task" class="submitbtn">
+    {% endif %}
+  </form>
 </div>
 {% endblock %}
