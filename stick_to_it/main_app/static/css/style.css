@@ -3,9 +3,11 @@
   padding: 0;
   font-family: 'Roboto';
   text-align: left;
+  color: #252525;
+  /* background-color: #FCFAFF; */
 }
 body {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   
 }
 *::selection {
@@ -19,7 +21,7 @@ body {
   font-family: 'Bungee';
   padding: 7px 10px 7px 10px;
   border-radius: 2px;
-  background-color: black;
+  background-color: #252525;
   color: white;
   display:inline;
 }
@@ -27,7 +29,7 @@ body {
 
 main {
   padding: 48px;
-  background-color: white;
+  background-color: #FCFAFF;
   font-family: 'Roboto';
 }
 
@@ -37,7 +39,7 @@ header {
 }
 nav {
   /* background-color: black; */
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #252525;
   height: 60px;
   padding: 0 0 0 0;
   margin-top: 2%;
@@ -120,7 +122,7 @@ flex-direction: right;
 }
 
 h1 {
-  border-bottom: 2px solid black; 
+  border-bottom: 2px solid #252525; 
   /* background-color: yellow; */
   display: inline;
   font-size: 54px;
@@ -128,29 +130,33 @@ h1 {
   /* -webkit-text-stroke: 1px white; */
 }
 
+h2 {
+  font-size: 32px;
+}
 .subheading {
   margin-top: 1%;
+  color: rgb(166, 166, 166);
 }
 
 section {
   /* rotate: -40 -70 -10 30deg; */
   
-  color: black;
-  margin-left: 30px;
+  color: #252525;
+  /* margin-left: 30px; */
   margin-top: 3%;
   display: flex;
   /* border: solid black 1px; */
   flex-direction: left;
   flex-wrap: wrap;
   /* justify-content: space-around; */
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  /* border-left: 2px solid black;
+  border-right: 2px solid black; */
   
 }
 
 .card {
-  width: 200px;
-  height: 200px;
+  width: 225px;
+  height: 225px;
   background: linear-gradient(to top,  #fbf969, #fffc65 90%);
   border-radius: 2px;
   transition: 0.4s;
@@ -159,18 +165,19 @@ section {
   /* background-color: #ff52ff; */
   padding: 24px;
   /* border: solid black 1px; */
-  margin: 10px
-
+  margin: 10px 20px 20px 20px;
+  border-radius: 20px;
 }
 
 .card:hover {
   transform: scale(1.05); 
   transition: 0.4s;
+  border-radius: 0;
 }
 
 .addcard {
-  width: 200px;
-  height: 200px;
+  width: 225px;
+  height: 225px;
   /* background: linear-gradient(to top,  #f4f018, #f4f018 90%); */
   border-radius: 20px;
   /* border: 2px solid black; */
@@ -199,24 +206,30 @@ section {
 .carddate {
   /* background-color: white; */
   border-radius: 5px;
-  
+  font-size: 14px;
   /* padding: 3px; */
   font-weight: bold;
   
- 
- 
 }
+ .cardform {
+  background-color: rgb(231, 231, 231);
+  border-radius: 25px;
+  width: 30%;
+ }
+
 footer {
-  color: white;
+  color: rgb(249, 249, 249);
   padding: 48px;
   position: relative;
-  bottom: 20px;
+  bottom: 10px;
   width: 100%;
-  height: 2.5rem;            /* Footer height */
+  height: 2rem;            /* Footer height */
 }
 
 form {
   margin-top: 3%;
+  display: flex;
+  flex-direction: right;
 }
 
 .editbox {
@@ -224,36 +237,35 @@ form {
 }
 
 .editbtn, .editbtn:visited {
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 9px 15px 9px 15px;
-  margin-top: 10%;
-  transition: 0.4s;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 9px 45px 9px 45px;
+  color: black;
   text-decoration: none;
-  text-transform: uppercase;
-  
-  color:black;
+  background-color: lightgray;
 }
 
 .deletebtn, .deletebtn:visited {
-  border: 2px solid black;
-  border-radius: 10px;
-  color:black;
-  padding: 9px 15px 9px 15px;
-  transition: 0.4s;
-  margin-top: 10%;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 9px 45px 9px 45px;
+  color: #252525;
   text-decoration: none;
-  text-transform: uppercase;
-  
-  
+  background-color: lightgray;
 }
 
 .deletebtn:hover {
-  background-color: #ff52ff;
+  
 }
 
 .editbtn:hover {
-  background-color: #00ffff;
+ 
 }
 
 .logoutbtn, .logoutbtn:visited {
@@ -266,7 +278,7 @@ form {
 
 .logoutbtn:hover {
   /* transform: scale(1.2);  */
-  background-color: rgb(252, 94, 94);
+  text-shadow: -2px -2px 0 rgb(252, 94, 94);
 }
 
 .submitbtn {
@@ -288,9 +300,59 @@ form {
   color: black;
 
 }
+
+.donebtn, .donebtn:visited {
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 9px 45px 9px 45px;
+}
+
+.checkbtn {
+  color: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.checkbox::before {
+  background-color: none;
+  font-size: 40px !important;
+  width: 200%;
+  height: 200%;
+  content: 'check_box_outline_blank';
+}
+.checkbox:hover::before {
+  content: 'select_check_box';
+}
+
+.checkbox:active::before {
+  content: 'select_check_box';
+  color: lightgray;
+}
+.pencilbtn {
+  display: inline;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 20px;
+  padding-top: 0;
+  margin-top: 70px;
+  border: none;
+  position: absolute;
+}
+.pencilbtn:hover:before {
+  
+  content: 'edit';
+  color: black;
+  
+}
 .plus, .plus:visited {
   text-decoration: none;
-  font-size: 8em;
+  font-size: 8em !important;
   color: lightgray;
   transition: 0.4s;
   padding-bottom: 2px;
@@ -298,11 +360,12 @@ form {
 }
 
 .plus:hover {
-  color: black
+  color: #252525
 }
-  
+
+
 /* GOOGLE SYMBOL  */
-  .material-symbols-outlined {
+  /* .material-symbols-outlined {
   font-size: 1000%;
   font-variation-settings:
   'FILL' 0,
@@ -310,7 +373,7 @@ form {
   'GRAD' 0,
   'opsz' 24;
   
-}
+} */
 
 /*curl bottom left */
 .card {
@@ -336,6 +399,7 @@ form {
   transition-duration: 0.3s;/* time duration */
   transition-property: width, height;
   width: 0;
+  
 }
 .card:hover::before {
   height: 75px;

@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="titlecontainer">
-    <h1>Archived Activities</h1>
-    <p class="subheading">You've completed {{cards|length}} cards—great job!</p>
+    <h1>Completed Tasks</h1>
+    <p class="subheading">You've completed {{cards|length}} tasks—great job!</p>
 </div>
 
 <section>
@@ -11,9 +11,10 @@
     {% for card in cards %}
     <a href="{% url 'detail' card.id %}" class="cardlink">
         <div class="card">
+            
+            <p class="carddate">Was Due: {{card.due_date}}</p>
+            <p class="carddate">Completed: {{card.complete_date}}</p>
             <h2>{{card.activity}}</h2>
-            <p class="carddate">Due Date: {{card.due_date}}</p>
-            <p class="carddate">Complete Date: {{card.complete_date}}</p>
         </div>
     </a>
     {% endfor %}
