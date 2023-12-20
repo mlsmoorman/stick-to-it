@@ -7,7 +7,7 @@
   /* background-color: #FCFAFF; */
 }
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #FCFAFF;
   
 }
 *::selection {
@@ -39,7 +39,7 @@ header {
   /* flex-direction: right; */
 }
 nav {
-  /* background-color: black; */
+  background-color: #FCFAFF;
   border-bottom: 2px solid #252525;
   /* height: 60px; */
   padding-block-end: 2%;
@@ -100,10 +100,10 @@ max-width: 1200px;
   
 }
 .yellow:hover {
-  text-shadow: -2px -2px 0 #fbf719,
-  2px 2px 0 #fbf719;
-  /* border: 2px solid #fbf719;
-  background-color: #fbf719;; */
+  /* text-shadow: -2px -2px 0 #fbf719,
+  2px 2px 0 #fbf719; */
+  /* border: 2px solid #fbf719; */
+  background-color: #fbf719;; 
   border-radius: 3px;
   transition: 0.2s;
   
@@ -176,7 +176,8 @@ section {
   transform: scale(1.05); 
   transition: 0.2s;
   border-radius: 0;
-  box-shadow: 0px 0px 15px 3px magenta;
+  /* text-shadow: 0px 0px 15px 3px magenta; */
+  /* filter: drop-shadow(0px 0px 10px rgba(0 0 0 / 30%)) */
 }
 
 .addcard {
@@ -228,7 +229,7 @@ section {
  }
 
 footer {
-  color: rgb(249, 249, 249);
+  color: #FCFAFF;
   padding: 48px;
   position: relative;
   bottom: 10px;
@@ -240,6 +241,12 @@ form {
   margin-top: 3%;
   /* display: flex;
   flex-direction: right; */
+}
+
+#id_activity, #id_due_date, #id_complete_date {
+  padding: 5px 0;
+  
+  font-size: 1.5em;
 }
 
 .cardform input[type=text] {
@@ -296,7 +303,8 @@ form {
 
 .logoutbtn:hover {
   /* transform: scale(1.2);  */
-  text-shadow: -2px -2px 0 rgb(252, 94, 94);
+  /* text-shadow: -2px -2px 0 rgb(252, 94, 94); */
+  background-color: rgb(252, 94, 94);;
 }
 
 .submitbtn {
@@ -400,7 +408,7 @@ form {
 /*curl bottom left */
 .card {
   backface-visibility: hidden;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  /* box-shadow: 0 0 1px rgba(0, 0, 0, 0); */
   display: inline-block;
   position: relative;
   transform: translateZ(0px);
@@ -409,7 +417,7 @@ form {
 }
 .card::before {
   
-  background: rgba(0, 0, 0, 0) linear-gradient(45deg, white 45%, #cecb14 50%, #e9e617 56%, #ebe719 80%) repeat scroll 0 0;  /*display smooth transitions between two or more specified colors */
+  background: rgba(0, 0, 0, 0) linear-gradient(45deg, #FCFAFF 45%, #cecb14 50%, #e9e617 56%, #ebe719 80%) repeat scroll 0 0;  /*display smooth transitions between two or more specified colors */
   bottom: 0;
   /* box-shadow: 1px -1px 1px rgb(0, 0, 0); */
  
@@ -437,9 +445,7 @@ form {
   margin: 0 auto;
 }
 
-#id_activity {
-  font-size: 2em;
-}
+
 
 li span.material-symbols-outlined {
   vertical-align: text-top;

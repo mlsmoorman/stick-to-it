@@ -29,7 +29,7 @@
         <li class="yellow"><a href="{% url 'about' %}">About</a></li>
         {% if user.is_authenticated %}
         <li class="yellow"><a href="{% url 'index' %}">My Tasks</a></li>
-        <li class="yellow"><a href="{% url 'archive' %}">See the Archive</a></li>
+        <li class="yellow"><a href="{% url 'archive' %}">Completed Tasks</a></li>
         <li class="yellow"><a href="{% url 'card_create' %}">
           <span class="material-symbols-outlined">add</span> 
           Add a Task</a></li>
