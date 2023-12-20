@@ -3,8 +3,14 @@
 {% block content %}
 <div class="titlecontainer">
     <h1>My Tasks</h1>
+    
+    {% if cards|length == 0  %}
+    <p class="subheading">You've got <mark>{{cards|length}}</mark>! Way to stick to it!
+    {% else %}
     <p class="subheading">You've got <mark>{{cards|length}}</mark> cards to do—why not check one off?
     </p>
+    {% endif %}
+        
 </div>
 
 <section>
