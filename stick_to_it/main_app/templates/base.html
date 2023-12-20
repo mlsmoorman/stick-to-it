@@ -30,7 +30,9 @@
         {% if user.is_authenticated %}
         <li class="yellow"><a href="{% url 'index' %}">My Tasks</a></li>
         <li class="yellow"><a href="{% url 'archive' %}">See the Archive</a></li>
-        <li class="yellow"><a href="{% url 'card_create' %}"><span class="material-symbols-outlined">add</span> Add a Task</a></li>
+        <li class="yellow"><a href="{% url 'card_create' %}">
+          <span class="material-symbols-outlined">add</span> 
+          Add a Task</a></li>
         <li>
           <form id="logout-form" method="POST" action="{% url 'logout' %}">
             {% csrf_token %}

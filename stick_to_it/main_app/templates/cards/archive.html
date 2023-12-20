@@ -9,7 +9,7 @@
 <section>
     
     {% for card in cards %}
-    <a href="{% url 'detail' card.id %}" class="cardlink">
+    <a href="{% url 'card_update' card.id %}" class="cardlink">
         <div class="card">
             
             <p class="carddate">Was Due: {{card.due_date}}</p>
