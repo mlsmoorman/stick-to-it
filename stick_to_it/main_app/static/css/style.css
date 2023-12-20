@@ -6,14 +6,17 @@
   color: #252525;
   /* background-color: #FCFAFF; */
 }
+
 body {
   background-color: #FCFAFF;
-  
+  display: flex;
+  flex-direction: column;
 }
+
 *::selection {
   color: black;
   background-color: #a9a9a9;
-  
+
 }
 
 .test {
@@ -23,7 +26,7 @@ body {
   border-radius: 2px;
   background-color: #252525;
   color: white;
-  display:inline;
+  display: inline;
 }
 
 
@@ -31,51 +34,52 @@ main {
   padding: 48px;
   background-color: #FCFAFF;
   font-family: 'Roboto';
-  
+
 }
 
 header {
   /* display: flex; */
   /* flex-direction: right; */
 }
+
 nav {
   background-color: #FCFAFF;
   border-bottom: 2px solid #252525;
   /* height: 60px; */
-  padding-block-end: 2%;
-  margin-top: 2%;
+  /* padding-block-end: 2%; */
+  padding-block: 2%;
   /* padding-inline: 10%; */
   /* width: 100%; */
   /* flex-direction: right; */
 }
+
 .navlist {
-display: flex;
-list-style: none;
-flex-direction: right;
-justify-content: space-between;
-font-family: 'Bungee';
-flex-direction: right;
-max-width: 1200px;
+  display: flex;
+  list-style: none;
+  /* flex-direction: right; */
+  /* justify-content: space-between; */
+  font-family: 'Bungee';
+  /* max-width: 1200px; */
 }
 
-.navlist li:last-child {
+#push_left {
   margin-inline-start: auto;
 }
 
 .titlecontainer {
-  
+
   /* rotate: -40 -70 -10 30deg; */
 }
 
 
-.navlist li a{
+.navlist li a {
   padding: 10px;
   transition: 0.3s;
   color: black;
   text-decoration: none;
   font-size: 20px;
-  
-  
+
+
 }
 
 .cyan:hover {
@@ -83,35 +87,40 @@ max-width: 1200px;
   /* background-color: #00ffff; */
   border-radius: 3px;
   transition: 0.2s;
-  
-  
+
+
   text-shadow: -2px -2px 0 #ffa2ff,
-  2px 2px 0 #fbf719;
+    2px 2px 0 #fbf719;
 }
+
 .magenta:hover {
   /* border: 2px solid #ff52ff;
   background-color: #ff52ff; */
   border-radius: 3px;
   transition: 0.2s;
-  
-  
+
+
   text-shadow: -2px -2px 0 #a1ffff,
-  2px 2px 0 #fbf719;
-  
+    2px 2px 0 #fbf719;
+
 }
+
 .yellow:hover {
   /* text-shadow: -2px -2px 0 #fbf719,
   2px 2px 0 #fbf719; */
   /* border: 2px solid #fbf719; */
-  background-color: #fbf719;; 
+  background-color: #fbf719;
+  ;
   border-radius: 3px;
   transition: 0.2s;
-  
+
 }
+
 .navlist li a:visited {
   color: #252525;
- 
+
 }
+
 .navlist li a:hover {
   letter-spacing: 2px;
   /* transform: scale(1.2);  */
@@ -122,13 +131,14 @@ max-width: 1200px;
   /* box-shadow: inset 1em 1em #fbf719,
               20px -16px #fbf719; */
 }
+
 .navlist li a:active {
-  color:#fbf719;
-  
+  color: #fbf719;
+
 }
 
 h1 {
-  border-bottom: 2px solid #252525; 
+  border-bottom: 2px solid #252525;
   /* background-color: yellow; */
   display: inline;
   font-size: 54px;
@@ -143,7 +153,7 @@ h1 {
 
 section {
   /* rotate: -40 -70 -10 30deg; */
-  
+
   color: #252525;
   /* margin-left: 30px; */
   margin-top: 3%;
@@ -154,13 +164,13 @@ section {
   /* justify-content: space-around; */
   /* border-left: 2px solid black;
   border-right: 2px solid black; */
-  
+
 }
 
 .card {
   width: 225px;
   height: 225px;
-  background: linear-gradient(to top,  #fbf969, #fffc65 90%);
+  background: linear-gradient(to top, #fbf969, #fffc65 90%);
   border-radius: 2px;
   transition: 0.4s;
   /* background-color: #fbf719; */
@@ -173,7 +183,7 @@ section {
 }
 
 .card:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   transition: 0.2s;
   border-radius: 0;
   /* text-shadow: 0px 0px 15px 3px magenta; */
@@ -196,7 +206,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .addcard:hover {
@@ -204,7 +214,8 @@ section {
   box-shadow: 5px 5px 10px 2px rgba(227, 227, 227, 0.8);
 }
 
-.cardlink, .cardlink:visited {
+.cardlink,
+.cardlink:visited {
   color: black
 }
 
@@ -214,9 +225,10 @@ section {
   font-size: 14px;
   /* padding: 3px; */
   font-weight: bold;
-  
+
 }
- .cardform {
+
+.cardform {
   background-color: rgb(231, 231, 231);
   border-radius: 25px;
   /* width: 40%; */
@@ -225,16 +237,19 @@ section {
   align-items: left;
   margin: 0 auto;
   padding: 50px;
-  
- }
+
+}
 
 footer {
   color: #FCFAFF;
+  margin-top: auto;
+  align-self: center;
   padding: 48px;
   position: relative;
   bottom: 10px;
   width: 100%;
-  height: 2rem;            /* Footer height */
+  height: 2rem;
+  /* Footer height */
 }
 
 form {
@@ -243,9 +258,11 @@ form {
   flex-direction: right; */
 }
 
-#id_activity, #id_due_date, #id_complete_date {
+#id_activity,
+#id_due_date,
+#id_complete_date {
   padding: 5px 0;
-  
+
   font-size: 1.5em;
 }
 
@@ -261,7 +278,8 @@ form {
   margin-top: 3%;
 }
 
-.editbtn, .editbtn:visited {
+.editbtn,
+.editbtn:visited {
   border: none;
   border-radius: 5px;
   font-weight: 700;
@@ -273,7 +291,8 @@ form {
   background-color: lightgray;
 }
 
-.deletebtn, .deletebtn:visited {
+.deletebtn,
+.deletebtn:visited {
   border: none;
   border-radius: 5px;
   font-weight: 700;
@@ -285,15 +304,12 @@ form {
   background-color: lightgray;
 }
 
-.deletebtn:hover {
-  
-}
+.deletebtn:hover {}
 
-.editbtn:hover {
- 
-}
+.editbtn:hover {}
 
-.logoutbtn, .logoutbtn:visited {
+.logoutbtn,
+.logoutbtn:visited {
   transition: 0.4s;
   border: none;
   background-color: white;
@@ -304,7 +320,8 @@ form {
 .logoutbtn:hover {
   /* transform: scale(1.2);  */
   /* text-shadow: -2px -2px 0 rgb(252, 94, 94); */
-  background-color: rgb(252, 94, 94);;
+  background-color: rgb(252, 94, 94);
+  ;
 }
 
 .submitbtn {
@@ -316,18 +333,17 @@ form {
   padding: 9px 45px 9px 45px;
 }
 
-.submitbtn:hover {
+.submitbtn:hover {}
 
-    
-}
-
-.backbtn, .backbtn:visited {
+.backbtn,
+.backbtn:visited {
   display: block;
   color: black;
 
 }
 
-.donebtn, .donebtn:visited {
+.donebtn,
+.donebtn:visited {
   border: none;
   border-radius: 5px;
   font-weight: 700;
@@ -356,6 +372,7 @@ form {
   height: 200%;
   content: 'check_box_outline_blank';
 }
+
 .checkbox:hover::before {
   content: 'select_check_box';
 }
@@ -364,6 +381,7 @@ form {
   content: 'select_check_box';
   color: lightgray;
 }
+
 .pencilbtn {
   display: inline;
   background-color: transparent;
@@ -374,19 +392,22 @@ form {
   border: none;
   position: absolute;
 }
+
 .pencilbtn:hover:before {
-  
+
   content: 'edit';
   color: black;
-  
+
 }
-.plus, .plus:visited {
+
+.plus,
+.plus:visited {
   text-decoration: none;
   font-size: 8em !important;
   color: lightgray;
   transition: 0.4s;
   padding-bottom: 2px;
-  
+
 }
 
 .plus:hover {
@@ -395,7 +416,7 @@ form {
 
 
 /* GOOGLE SYMBOL  */
-  /* .material-symbols-outlined {
+/* .material-symbols-outlined {
   font-size: 1000%;
   font-variation-settings:
   'FILL' 0,
@@ -413,28 +434,32 @@ form {
   position: relative;
   transform: translateZ(0px);
   vertical-align: middle;
-  
+
 }
+
 .card::before {
-  
-  background: rgba(0, 0, 0, 0) linear-gradient(45deg, #FCFAFF 45%, #cecb14 50%, #e9e617 56%, #ebe719 80%) repeat scroll 0 0;  /*display smooth transitions between two or more specified colors */
+
+  background: rgba(0, 0, 0, 0) linear-gradient(45deg, #FCFAFF 45%, #cecb14 50%, #e9e617 56%, #ebe719 80%) repeat scroll 0 0;
+  /*display smooth transitions between two or more specified colors */
   bottom: 0;
   /* box-shadow: 1px -1px 1px rgb(0, 0, 0); */
- 
+
   content: "";
   height: 0;
   left: 0;
   pointer-events: none;
   position: absolute;
-  transition-duration: 0.3s;/* time duration */
+  transition-duration: 0.3s;
+  /* time duration */
   transition-property: width, height;
   width: 0;
-  
+
 }
+
 .card:hover::before {
   height: 75px;
   width: 75px;
-  
+
 }
 
 .card h2 {
@@ -445,13 +470,39 @@ form {
   margin: 0 auto;
 }
 
-
-
 li span.material-symbols-outlined {
   vertical-align: text-top;
 }
 
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-inline: 1em;
+}
 
+.home h1 {
+  flex: 1;
+}
+.home img {
+  flex: 2;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+
+.login, .signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login p:last-child, .signup p:last-child {
+  padding: 1em;
+  border: 2px solid blue;
+}
 
 /* =======================
 /* media queries 
@@ -469,4 +520,11 @@ li span.material-symbols-outlined {
   .navlist li:last-child {
     margin: initial;
   }
+}
+
+
+/* =======================
+/* dark mode
+/* =====================*/
+@media (prefers-color-scheme: dark) {
 }
