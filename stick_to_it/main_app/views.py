@@ -76,3 +76,8 @@ def cards_detail(request, card_id):
 def cards_archive(request):
     cards = Card.objects.filter(user=request.user).exclude(complete_date=None)
     return render(request, 'cards/archive.html', { 'cards': cards })
+
+@login_required
+def cards_complete(request, card_id):
+    Card.objects.filter(id=card_id).update(complete_date=datetime.date.today())
+    return redirect('index')
