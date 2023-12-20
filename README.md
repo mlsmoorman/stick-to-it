@@ -19,9 +19,12 @@ Description of App Here
 # <img src="https://i.imgur.com/bsqBd83.png" width="5%" height="5%" alt="pink">Technologies Used
 
 - Python
+- PostgreSQL
 - Django
-- ORM
 - DTL
+- HTML
+- ORM
+- JavaScript
 - CSS
 
 # Let's Check it Out!
