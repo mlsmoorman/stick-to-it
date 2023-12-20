@@ -33,7 +33,7 @@
         <li class="yellow"><a href="{% url 'card_create' %}">
           <span class="material-symbols-outlined">add</span> 
           Add a Task</a></li>
-        <li>
+        <li id="push_left">
           <form id="logout-form" method="POST" action="{% url 'logout' %}">
             {% csrf_token %}
             <button type="submit" class="logoutbtn">Log out</button>
