@@ -7,6 +7,11 @@
   /* background-color: #FCFAFF; */
 }
 
+html {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 body {
   background-color: #FCFAFF;
   display: flex;
@@ -35,6 +40,7 @@ main {
   background-color: #FCFAFF;
   font-family: 'Roboto';
 
+
 }
 
 header {
@@ -48,7 +54,7 @@ nav {
   /* height: 60px; */
   /* padding-block-end: 2%; */
   padding-block: 2%;
-  margin-left: 3%;
+  margin-inline: 3%;
   /* padding-inline: 10%; */
   /* width: 100%; */
   /* flex-direction: right; */
@@ -115,7 +121,7 @@ nav {
   border-bottom: 1px solid #252525;
   border-radius: 0;
   padding: 0 10px;
-  
+
   transition: 0.3s;
 
 }
@@ -328,7 +334,7 @@ form {
   /* text-shadow: -2px -2px 0 rgb(252, 94, 94); */
   background-color: rgb(252, 94, 94);
   padding: 0 10px;
-  
+
 }
 
 .submitbtn {
@@ -393,7 +399,7 @@ form {
 
 
 .pencilbtn:before {
-  
+
   background-color: transparent;
   cursor: pointer;
   /* padding: 20px;
@@ -416,7 +422,7 @@ form {
   content: 'edit';
   color: #252525;
   background-color: #ffffff94;
-  
+
   padding: 25px;
   opacity: 1;
 
@@ -501,12 +507,13 @@ li span.material-symbols-outlined {
   justify-content: center;
   align-items: center;
   gap: 2em;
-  margin-inline: 1em;
+  /* margin-inline: 1em; */
 }
 
 .home h1 {
   flex: 1;
 }
+
 .home img {
   flex: 2;
   width: 100%;
@@ -515,13 +522,15 @@ li span.material-symbols-outlined {
 }
 
 
-.login, .signup {
+.login,
+.signup {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.login p:last-child, .signup p:last-child {
+.login p:last-child,
+.signup p:last-child {
   padding: 1em;
   border: 2px solid blue;
 }
@@ -529,18 +538,27 @@ li span.material-symbols-outlined {
 /* =======================
 /* media queries 
 /* =====================*/
+@media (max-width: 762px) {
+  .navlist li {
+    text-align: start;
+  }
+}
 
 @media (max-width: 576px) {
   .navlist {
     flex-direction: column;
     align-items: flex-end;
-    position: static;
-    top: 0;
-    right: 0;
+    /* position: static; */
+    /* top: 0; */
+    /* right: 0; */
   }
 
   .navlist li:last-child {
-    margin: initial;
+    margin-inline-end: unset;
+  }
+
+  footer {
+    margin: 0 auto 0 0;
   }
 }
 
@@ -548,5 +566,4 @@ li span.material-symbols-outlined {
 /* =======================
 /* dark mode
 /* =====================*/
-@media (prefers-color-scheme: dark) {
-}
+@media (prefers-color-scheme: dark) {}
