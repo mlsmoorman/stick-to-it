@@ -32,8 +32,8 @@ def signup(request):
 # Create a new Activity Card
 class CardCreate(LoginRequiredMixin, CreateView):
     model = Card
+    # Uses modified form class from forms.py to enable 
     form_class = CardForm
-
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
@@ -51,33 +51,36 @@ class CardUpdate(LoginRequiredMixin, UpdateView):
     form_class = CardForm
     # fields = ['activity', 'due_date', 'complete_date']
 
-
+# View user's Cards
 @login_required
 def cards_index(request):
     cards = Card.objects.filter(user=request.user).filter(complete_date=None)
     return render(request, "cards/index.html", {"cards": cards})
 
-
+# Home Page
 def home(request):
     return render(request, "home.html")
 
-
+# About Page
 def about(request):
     return render(request, "about.html")
 
-
+# Detail Page
 @login_required
 def cards_detail(request, card_id):
     card = Card.objects.get(id=card_id)
     return render(request, "cards/detail.html", {"card": card})
 
-
+# Completed Task Card Page
 @login_required
 def cards_archive(request):
+    # filters cards and removes those that do not have a completed date
     cards = Card.objects.filter(user=request.user).exclude(complete_date=None)
     return render(request, 'cards/archive.html', { 'cards': cards })
 
+# Complete Card Page 
 @login_required
 def cards_complete(request, card_id):
+    # filters to the selected card and updates the date to today's date 
     Card.objects.filter(id=card_id).update(complete_date=datetime.date.today())
     return redirect('index')

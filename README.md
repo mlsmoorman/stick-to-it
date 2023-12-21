@@ -34,6 +34,7 @@ Description of App Here
 
 # <img src="https://i.imgur.com/IbkyBku.png" width="5%" height="5%" alt="blue">Future Enhancements
 
+- Alerts when tasks are approacing the due date or past due
 - Use of the Google Calendar API to set up calendar reminders
 - Badge system here users earn badges based on number of tasks completed
 - Daily Stick-To-Its that reappear every day
