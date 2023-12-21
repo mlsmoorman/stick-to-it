@@ -44,10 +44,11 @@ header {
 
 nav {
   background-color: #FCFAFF;
-  border-bottom: 2px solid #252525;
+  /* border-bottom: 2px solid #252525; */
   /* height: 60px; */
   /* padding-block-end: 2%; */
   padding-block: 2%;
+  margin-left: 3%;
   /* padding-inline: 10%; */
   /* width: 100%; */
   /* flex-direction: right; */
@@ -73,7 +74,8 @@ nav {
 
 
 .navlist li a {
-  padding: 10px;
+  padding: 5px;
+  margin: 0 10px;
   transition: 0.3s;
   color: black;
   text-decoration: none;
@@ -109,10 +111,12 @@ nav {
   /* text-shadow: -2px -2px 0 #fbf719,
   2px 2px 0 #fbf719; */
   /* border: 2px solid #fbf719; */
-  background-color: #fbf719;
-  ;
-  border-radius: 3px;
-  transition: 0.2s;
+  /* background-color: #fbf719; */
+  border-bottom: 1px solid #252525;
+  border-radius: 0;
+  padding: 0 10px;
+  
+  transition: 0.3s;
 
 }
 
@@ -138,7 +142,7 @@ nav {
 }
 
 h1 {
-  border-bottom: 2px solid #252525;
+  /* border-bottom: 2px solid #252525; */
   /* background-color: yellow; */
   display: inline;
   font-size: 54px;
@@ -148,6 +152,7 @@ h1 {
 
 .subheading {
   margin-top: 1%;
+  font-size: 19px;
   color: rgb(101, 101, 101);
 }
 
@@ -178,7 +183,7 @@ section {
   /* background-color: #ff52ff; */
   padding: 24px;
   /* border: solid black 1px; */
-  margin: 10px 20px 20px 20px;
+  margin: 10px 20px 20px 0;
   border-radius: 20px;
 }
 
@@ -201,7 +206,7 @@ section {
   /* background-color: #ff52ff; */
   padding: 24px;
   /* border: solid black 1px; */
-  margin: 10px;
+  margin: 10px 10px 10px 0;
   transition: 0.4s;
   display: flex;
   justify-content: center;
@@ -229,7 +234,7 @@ section {
 }
 
 .cardform {
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(240, 240, 240);
   border-radius: 25px;
   /* width: 40%; */
   flex-direction: column;
@@ -245,6 +250,7 @@ footer {
   margin-top: auto;
   align-self: center;
   padding: 48px;
+  margin-left: 7%;
   position: relative;
   bottom: 10px;
   width: 100%;
@@ -321,7 +327,8 @@ form {
   /* transform: scale(1.2);  */
   /* text-shadow: -2px -2px 0 rgb(252, 94, 94); */
   background-color: rgb(252, 94, 94);
-  ;
+  padding: 0 10px;
+  
 }
 
 .submitbtn {
@@ -359,8 +366,8 @@ form {
   cursor: pointer;
 
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 20px;
+  bottom: 20px;
 }
 
 
@@ -382,21 +389,36 @@ form {
   color: lightgray;
 }
 
-.pencilbtn {
-  display: inline;
+
+
+
+.pencilbtn:before {
+  
   background-color: transparent;
   cursor: pointer;
-  padding: 20px;
+  /* padding: 20px;
   padding-top: 0;
-  margin-top: 70px;
+  margin-top: 70px; */
   border: none;
   position: absolute;
+  font-size: 80px !important;
+  left: 65px;
+  bottom: 65px;
+  color: transparent;
+  transition: 0.4s;
+  content: 'edit';
+  border-radius: 50%;
+  opacity: 0.5;
 }
 
 .pencilbtn:hover:before {
 
   content: 'edit';
-  color: black;
+  color: #252525;
+  background-color: #ffffff94;
+  
+  padding: 25px;
+  opacity: 1;
 
 }
 
@@ -439,7 +461,7 @@ form {
 
 .card::before {
 
-  background: rgba(0, 0, 0, 0) linear-gradient(45deg, #FCFAFF 45%, #cecb14 50%, #e9e617 56%, #ebe719 80%) repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) linear-gradient(45deg, #FCFAFF 45%, #cecb14 50%, #dbd956 56%, #eeec53 80%) repeat scroll 0 0;
   /*display smooth transitions between two or more specified colors */
   bottom: 0;
   /* box-shadow: 1px -1px 1px rgb(0, 0, 0); */

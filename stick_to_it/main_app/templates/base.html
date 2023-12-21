@@ -31,8 +31,8 @@
         <li class="yellow"><a href="{% url 'index' %}">My Tasks</a></li>
         <li class="yellow"><a href="{% url 'archive' %}">Completed Tasks</a></li>
         <li class="yellow"><a href="{% url 'card_create' %}">
-          <span class="material-symbols-outlined">add</span> 
-          Add a Task</a></li>
+          <span class="material-symbols-outlined"></span> 
+         + Add a Task</a></li>
         <li id="push_left">
           <form id="logout-form" method="POST" action="{% url 'logout' %}">
             {% csrf_token %}

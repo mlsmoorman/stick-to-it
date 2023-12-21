@@ -9,6 +9,7 @@ class CardForm(ModelForm):
         widgets = {
             'due_date': forms.DateInput(attrs={'type': 'date'}),
             'complete_date': forms.DateInput(attrs={'type': 'date'}),
+            'activity': forms.Textarea(attrs={'rows':5, 'cols':16})
         }
        
     
