@@ -3,9 +3,9 @@
 {% block content %}
 <div class="titlecontainer">
     <h1>My Tasks</h1>
-
     {% if cards|length == 0 %}
-    <p class="subheading">You've got <mark>{{cards|length}}</mark>! Way to stick to it!
+    <!-- Checks if the user completed all tasks and changes the message -->
+    <p class="subheading">You've got <mark>{{cards|length}}</mark>! Way to stick to it! Add more tasks to keep going!!
         {% else %}
     <p class="subheading">You've got <mark>{{cards|length}}</mark> cards to do—why not check one off?
     </p>
@@ -14,12 +14,10 @@
 </div>
 
 <section>
-
     {% for card in cards %}
+    <!-- Shows all cards that are incomplete for the logged user -->
     <a href="{% url 'card_update' card.id %}" class="cardlink">
-        <!-- <a href="{% url 'detail' card.id %}" class="cardlink"> -->
         <div class="card">
-
             {% if card.due_date != None %}
             <p class="carddate">Due: {{card.due_date}}</p>
             {% endif %}
@@ -28,19 +26,12 @@
             <form action="{% url 'complete' card.id %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="material-symbols-outlined checkbox checkbtn"></button>
-
             </form>
             <span class="material-symbols-outlined pencilbtn"></span>
-            <!-- <form action="{% url 'card_update' card.id %}" method="get">
-
-                <form action="{% url 'card_update' card.id %}"  method="post"> 
-                {% csrf_token %}
-                <button type="submit" class="material-symbols-outlined pencilbtn"></button>
-            </form> -->
         </div>
     </a>
-
     {% endfor %}
+    <!-- User's option to create a new card: -->
     <div class="addcard">
         <a href="{% url 'card_create' %}" class="material-symbols-outlined plus">add</a>
     </div>
