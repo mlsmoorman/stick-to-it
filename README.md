@@ -38,7 +38,7 @@ Best part...there is a ticker to keep track of all of the tasks you've completed
 
 # Let's Check it Out!
 
-### [Stick To It]()**Link to App Coming Soon!!!
+### [Stick To It](https://stick-to-it.fly.dev/)
 ### [Trello](https://trello.com/b/Emx3UtuT/project-4-stick-to-it)
 
 # <img src="https://i.imgur.com/IbkyBku.png" width="5%" height="5%" alt="blue">Future Enhancements

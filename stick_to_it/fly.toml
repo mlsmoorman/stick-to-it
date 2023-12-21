@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "stick-to-it-brad"
+app = "stick-to-it"
 primary_region = "ord"
 console_command = "/code/manage.py shell"
 
@@ -15,7 +15,6 @@ console_command = "/code/manage.py shell"
 [env]
   PORT = "8000"
   DJANGO_SETTINGS_MODULE = "stick_to_it.settings"
-
 
 [http_service]
   internal_port = 8000
