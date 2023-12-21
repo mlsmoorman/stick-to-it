@@ -21,7 +21,7 @@ class Card(models.Model):
     class Meta:
         ordering = ['due_date']
         
-        
+# Todo Model for future use / ice box items
 class Todo(models.Model):
     name = models.CharField(max_length=50, blank=True, null=True)
     card = models.ForeignKey(Card, on_delete=models.CASCADE)

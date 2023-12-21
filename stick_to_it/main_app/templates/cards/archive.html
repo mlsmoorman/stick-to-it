@@ -7,17 +7,14 @@
 </div>
 
 <section>
-    
     {% for card in cards %}
     <a href="{% url 'card_update' card.id %}" class="cardlink">
         <div class="card">
-            
             <p class="carddate">Was Due: {{card.due_date}}</p>
             <p class="carddate">Completed: {{card.complete_date}}</p>
             <h2>{{card.activity}}</h2>
         </div>
     </a>
     {% endfor %}
-
 </section>
 {% endblock content %}

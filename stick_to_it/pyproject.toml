@@ -4,9 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["Brad Smith <bradsmith@duck.com>"]
 readme = "README.md"
-
 [tool.poetry.dependencies]
 python = "^3.11"
+
 django = "^5.0"
 dj-database-url = "^2.1.0"
 daphne = "^4.0.0"
